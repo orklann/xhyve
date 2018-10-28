@@ -617,7 +617,7 @@ vcpu_loop(int vcpu, uint64_t startrip)
 			exit(1);
 		}
 
-                rc = (*handler[exitcode])(&vmexit[vcpu], &vcpu);
+        rc = (*handler[exitcode])(&vmexit[vcpu], &vcpu);
 
 		switch (rc) {
 		case VMEXIT_CONTINUE:
